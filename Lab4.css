@@ -1,39 +1,242 @@
 * {
-    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #fff5ec;
+    color: #321f1f;
+    padding: 10px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    background-color: #6b4f3b;
+    color: white;
+    padding: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#title {
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+/* Navigation */
+.navBar {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.navigation {
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #6b4f3b;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navigation:hover {
+    background-color: #d3bfa5;
+    color: #fff;
+}
+
+/* Banner Image */
+.imgBanner {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* Coffee Section */
+.coffee {
+    margin: 20px auto;
+    max-width: 1000px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.definition {
+    font-size: 1.05em;
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+
+/* Emphasis & Terms */
+.emphasis {
+    font-weight: bold;
+    color: #a0522d;
+}
+
+.term {
+    font-style: italic;
+    color: #704214;
+}
+
+/* Team Table */
 table {
     width: 100%;
+    margin-top: 15px;
+    border-spacing: 15px;
+    text-align: center;
 }
 
-td {
-    max-width: 12%;
+.teamMember {
     width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.label {
+    font-size: 0.9em;
+    padding-top: 5px;
+    color: #444;
+}
+
+/* Videos */
+.coffeeVideo {
+    width: 100%;
+    max-width: 350px;
+    height: 200px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #5a3e2b;
+}
+
+form input, form select {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+form input[type="submit"] {
+    background-color: #6b4f3b;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #8c6d54;
+}
+
+/* Buttons */
+#orderCoffee {
+    background-color: #8b5e3c;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    display: block;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#orderCoffee:hover {
+    background-color: #a76e42;
+}
+
+a[href^="#bottomPage"],
+a[href^="#title"] {
+    background-color: #8b5e3c;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    display: block;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+/* Menu Table */
+#coffee_choices {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+#coffee_choices td {
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
 }
 
 .coffeeImg {
     width: 100%;
-    height: 300px;
+    height: 150px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
-body {
-    background-color: lightblue;
+.coffeeTitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #4d2c17;
 }
 
-.about {
-    background-color: lightgreen;
+img:not(.coffeeImg) {
+    display: block;
+    margin: 0 auto 20px auto;
 }
 
-/* 
-LABORATORY EXERCISE #4
-Your task is to edit this CSS file and design the different web pages (delete the dummy/test code). 
-You are NOT allowed to modify/change the HTML files.
+/* Footer */
+footer {
+    background-color: #6b4f3b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 8px;
+}
 
-Tips: 
-1. There are some elements that have no classes at all (such as the list of steps in making coffee), to style them, 
-you can use contextual selectors or attribute selectors to select them for styling
-2. Just with any web design project, it's best to draft a wireframe first before you start working with the CSS.
-3. You do not have to select all the classes/ids in the web pages; 
-the main goal is to create a website that is both visually appealing and user-friendly.
-*/
+.contacts {
+    margin-top: 10px;
+    font-size: 0.95em;
+}
+
